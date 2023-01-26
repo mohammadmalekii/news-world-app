@@ -4,7 +4,7 @@
 
 this app use mediastack news api
 
-You can view the final project **[here](https://news-app-world.vercel.app)**
+You can view the final project **[here](https://news-world-app.vercel.app)**
 
 ## Getting Started
 
