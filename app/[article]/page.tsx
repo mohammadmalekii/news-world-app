@@ -6,10 +6,10 @@ type Props = {
   searchParams?: Article;
 };
 export default function ArticlePage({ searchParams }: Props) {
+  console.log(searchParams);
   if (
-    !searchParams ||
-    (searchParams && Object.keys(searchParams).length === 0) ||
-    (searchParams && Object.values(searchParams).length === 0)
+    (searchParams && Object.entries(searchParams).length === 0) ||
+    !searchParams
   ) {
     return notFound();
   }
