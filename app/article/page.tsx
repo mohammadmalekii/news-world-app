@@ -7,8 +7,9 @@ type Props = {
 };
 export default function ArticlePage({ searchParams }: Props) {
   if (
-    (searchParams && Object.entries(searchParams).length === 0) ||
-    !searchParams
+    !searchParams ||
+    (searchParams && Object.keys(searchParams).length === 0) ||
+    (searchParams && Object.values(searchParams).length === 0)
   ) {
     return notFound();
   }
@@ -30,8 +31,8 @@ export default function ArticlePage({ searchParams }: Props) {
             src="https://www.contentviewspro.com/wp-content/uploads/2017/07/default_image.png"
             alt={article.title}
           />
-          )}
-        
+        )}
+
         <div className="px-10">
           <h1 className="headerTitle px-0 no-underline pb-2">
             {article.title}
